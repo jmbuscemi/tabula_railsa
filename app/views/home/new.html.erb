@@ -1,16 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-
-<%= form_for(@survey, url: home_index_path) do |f|%>
-  <div>
-    Name: <%= f.text_field :name %>
-  </div>
-  <div>
-    Favorites:<br>
-    <%= f.check_box :chocolate %> Chocolate<br>
-    <%= f.check_box :rainbow %> Rainbows<br>
-    <%= f.check_box :puppies %> Puppies<br>
-    <%= f.check_box :cash %> Cold Hard Cash<br>
-  </div>
-    <%= f.submit %>
+<% if session[:survey_id] != nil %>
+  <p> You have already taken this survey </p>
+<% else %>
+  <%= form_for(@survey, url: home_index_path) do |f|%>
+    <div>
+      Name: <%= f.text_field :name %>
+    </div>
+    <div>
+      Favorites:<br>
+      <%= f.check_box :chocolate %> Chocolate<br>
+      <%= f.check_box :rainbow %> Rainbows<br>
+      <%= f.check_box :puppies %> Puppies<br>
+      <%= f.check_box :cash %> Cold Hard Cash<br>
+    </div>
+      <%= f.submit %>
+  <% end %>
 <% end %>
