@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+function updateCourse(){
+  var button = document.getElementsByName("commit");
+  button[0].disabled = true;
+}
