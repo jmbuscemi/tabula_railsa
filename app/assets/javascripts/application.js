@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-function updateCourse(){
-  var button = document.getElementsByName("commit");
-  button[0].disabled = true;
+function disableButton(){
+  var button = document.getElementById("submit");
+  setTimeout( function() {button.disabled = true;}, 1)
 }
