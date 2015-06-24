@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_action :check_session, only: [:show, :create]
+  # before_action :check_session, only: [:show, :create]
 
   def new
     @survey = Survey.new
@@ -25,11 +25,11 @@ class HomeController < ApplicationController
       params.require(:survey).permit(:name, :chocolate, :rainbow, :puppies, :cash)
     end
 
-    def check_session
-      unless session[:survey_id] == nil
-        flash.now[:notice] = "You have already submitted a survey"
-        redirect_to root_path
-      end
-    end
+    # def check_session
+    #   unless session[:survey_id] == nil
+    #     flash.now[:notice] = "You have already submitted a survey"
+    #     redirect_to root_path
+    #   end
+    # end
 
 end

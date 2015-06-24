@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<% if session[:survey_id] != nil %>
-  <p> You have already taken this survey </p>
-<% else %>
+<%# if session[:survey_id] != nil %>
+  <!-- <p> You have already taken this survey </p> -->
+<%# else %>
   <%= form_for(@survey, url: home_index_path) do |f|%>
     <div>
       Name: <%= f.text_field :name %>
@@ -15,5 +15,5 @@
       <%= f.check_box :cash %> Cold Hard Cash<br>
     </div>
       <%= f.submit(id: "submit", onclick: "disableButton") %>
-  <% end %>
+  <%# end %>
 <% end %>
