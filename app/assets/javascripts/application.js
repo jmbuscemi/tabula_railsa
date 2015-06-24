@@ -22,10 +22,7 @@ function disableButton(){
 }
 
 function ready(){
-  $("#survey_chocolate").hide();
-  $("#survey_rainbow").hide();
-  $("#survey_puppies").hide();
-  $("#survey_cash").hide();
+  $(":checkbox").hide();
 }
 
 $(ready);
