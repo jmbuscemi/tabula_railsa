@@ -25,4 +25,17 @@ function ready(){
   $(":checkbox").hide();
 }
 
+function showCheckBoxes(){
+  if ($("#survey_name").val().length > 0){
+    $("#survey-form").show();
+  } else {
+    $("#survey-form").hide();
+  }
+}
+
 $(ready);
+
+$(function(){
+  $("#survey_name").on("input", showCheckBoxes);
+  }
+);
